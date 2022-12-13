@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "fb8kPzpG0BCpBn9SWd1xGl9W5yrTLpHRPdOMQ2xyhDXWwArTJDAhqtvmoq0bTZbKdnnzSlMCXbfP1bopkAe/lw==",
+  "dgSpecHash": "RgKZenc4PzgsDViQRb08nHTF3AZIwJ9Zkd9F3r2G2zEuwTv7k0iOanVcBwfqbDdlS2dX1T735/qmgUHlqjwZCQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\olive\\source\\repos\\ConsoleApp5\\ConsoleApp5\\ConsoleApp5.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\olive\\OneDrive\\Documents\\GitHub\\-Console-Screen-Handler\\ConsoleApp5\\ConsoleApp5\\ConsoleApp5.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\olive\\.nuget\\packages\\newtonsoft.json\\13.0.2\\newtonsoft.json.13.0.2.nupkg.sha512"
+  ],
   "logs": []
 }

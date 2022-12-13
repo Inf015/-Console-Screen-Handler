@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\olive\\source\\repos\\ConsoleApp5\\ConsoleApp5\\ConsoleApp5.csproj": {}
+    "C:\\Users\\olive\\OneDrive\\Documents\\GitHub\\-Console-Screen-Handler\\ConsoleApp5\\ConsoleApp5\\ConsoleApp5.csproj": {}
   },
   "projects": {
-    "C:\\Users\\olive\\source\\repos\\ConsoleApp5\\ConsoleApp5\\ConsoleApp5.csproj": {
+    "C:\\Users\\olive\\OneDrive\\Documents\\GitHub\\-Console-Screen-Handler\\ConsoleApp5\\ConsoleApp5\\ConsoleApp5.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\olive\\source\\repos\\ConsoleApp5\\ConsoleApp5\\ConsoleApp5.csproj",
+        "projectUniqueName": "C:\\Users\\olive\\OneDrive\\Documents\\GitHub\\-Console-Screen-Handler\\ConsoleApp5\\ConsoleApp5\\ConsoleApp5.csproj",
         "projectName": "ConsoleApp5",
-        "projectPath": "C:\\Users\\olive\\source\\repos\\ConsoleApp5\\ConsoleApp5\\ConsoleApp5.csproj",
+        "projectPath": "C:\\Users\\olive\\OneDrive\\Documents\\GitHub\\-Console-Screen-Handler\\ConsoleApp5\\ConsoleApp5\\ConsoleApp5.csproj",
         "packagesPath": "C:\\Users\\olive\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\olive\\source\\repos\\ConsoleApp5\\ConsoleApp5\\obj\\",
+        "outputPath": "C:\\Users\\olive\\OneDrive\\Documents\\GitHub\\-Console-Screen-Handler\\ConsoleApp5\\ConsoleApp5\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\olive\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -39,6 +39,12 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.2, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
