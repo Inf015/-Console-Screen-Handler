@@ -1,0 +1,19 @@
+
+  {
+    "ID": 1,
+    "Titulo": "Formularo",
+    "Preguntas": [
+      {
+        "Texto": "Cual es tu nombre?:",
+        "Requerido": true
+      },
+      {
+        "Texto": "Vehiculo a competir:",
+        "Requerido": true
+      },
+      {
+        "Texto": "Categoria a competir:",
+        "Requerido": true
+      }
+    ]
+  }

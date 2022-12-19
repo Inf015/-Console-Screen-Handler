@@ -1,42 +1,19 @@
 ﻿using Newtonsoft.Json;
-using System.Text.Json;
-using System.Text.Json.Serialization;
 
 namespace ConsoleApp5
-{ 
-    class program{
-
-   
-    private static string _path = @"C:\Users\olive\OneDrive\Desktop\json\Ganador.json";
-static void Main(string[] args)
 {
+    class program
+    {
+        private static string _path = @"C:\Users\olive\OneDrive\Documents\GitHub\-Console-Screen-Handler\ConsoleApp5\ConsoleApp5\test.json";
+        private static string _path2 = @"C:\Users\olive\OneDrive\Documents\GitHub\-Console-Screen-Handler\ConsoleApp5\ConsoleApp5\test2.json";
+        static void Main(string[] args)
+        {
             //var ganador = GetGanadors();
-            //serializarJson(ganador);
 
             var ganador = GetGanadorFromFile();
             DeserializeJsonFile(ganador);
-}
-        #region "Create"
-        public static void serializarJson(List<Ganador> ganador)
-        {
-             string ganadorJson = JsonConvert.SerializeObject(ganador.ToArray(), Formatting.Indented);
-            File.WriteAllText(_path, ganadorJson);
         }
- public static List<Ganador> GetGanadors()
-    {
-            List<Ganador> ganador = new List<Ganador>{
-                new Ganador
-                {
-                    Name = "Oliver",
-                    Categoria = "D"
-                } 
-            };
-                    
 
- 
-    return ganador;
-      }
-        #endregion
 
         #region "Leer"
         public static string GetGanadorFromFile()
@@ -47,19 +24,53 @@ static void Main(string[] args)
                 GanadorJsonFile = read.ReadToEnd();
             }
             return GanadorJsonFile;
-    }
+        }
 
-
+        #region "Formulario"
         public static void DeserializeJsonFile(string GanadorJsonFile)
         {
-            Console.WriteLine(GanadorJsonFile);
+            List<Data> Respuestas = new List<Data>();
 
-            var ganador = JsonConvert.DeserializeObject<List<Ganador>>(GanadorJsonFile);
-            Console.WriteLine(string.Format("Ganadores: Nombre {0} Categoria {1}", ganador[0].Name, ganador[0].Categoria));
+            var ganador = JsonConvert.DeserializeObject<Formulario>(GanadorJsonFile);
+            foreach (var Pregunta in ganador.Preguntas)
+            {
+                while (true)
+                {
+                    Console.WriteLine($"{Pregunta.Texto}");
+                    var respuesta = Console.ReadLine();
+                    Console.Clear();
 
+                    if (!string.IsNullOrWhiteSpace(respuesta))
+                    {
+                        Respuestas.Add(new(Pregunta.Texto, respuesta));
+                        break;
+                    }
+                    Console.Clear();
+                }
 
+            }
+            serializarJson(Respuestas, _path2);
         }
         #endregion
+
+
+        #region "Data"
+        public static void serializarJson(List<Data> data, string path2)
+        {
+            var x = File.ReadAllText(path2);
+            var bk = JsonConvert.DeserializeObject<List<Data>>(x);
+
+            foreach (var b in data)
+            {
+                bk.Add(b);
+            }
+            string DataJson = JsonConvert.SerializeObject(bk);
+            File.WriteAllText(path2, DataJson);
+        }
+
+        #endregion
+
+        public static string buscar()
     }
 
 
@@ -68,3 +79,4 @@ static void Main(string[] args)
 
 
 }
+#endregion

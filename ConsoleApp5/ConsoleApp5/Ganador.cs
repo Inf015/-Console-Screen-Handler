@@ -6,9 +6,16 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp5
 {
-    public class Ganador
+    public class Formulario
     {
-        public string Name { get; set; }
-        public string Categoria {get; set; }
+        public int ID{ get; set; }
+        public string Titulo {get; set; }
+        public List<Pregunta> Preguntas {get; set; }
     }
+}
+
+public class Pregunta
+{
+    public string Texto { get; set; }
+    public bool Requerido { get; set; }
 }
